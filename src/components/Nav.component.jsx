@@ -22,10 +22,10 @@ const navButtons = [
 const Nav = Component =>
   function HOC() {
     return (
-      <div>
-        <div className="flex justify-between border-2 border-red-700">
-          <img className="w-24" src={_3R_logo} alt="3R_logo" />
-          <ul className="mr-4 flex gap-4">
+      <div className="h-screen bg-gradient-to-b from-[#3A2CDA] to-black">
+        <div className="mx-4 flex justify-between">
+          <img className="w-28" src={_3R_logo} alt="3R_logo" />
+          <ul className="mr-4 flex gap-16">
             {navButtons.map(button => (
               <NavButton key={button.name} {...button} />
             ))}
