@@ -1,7 +1,8 @@
 import React from "react";
+import Nav from "../components/Nav.component";
 
-function Services() {
+const Services = () => {
   return <div>Services</div>;
-}
+};
 
-export default Services;
+export default Nav(Services);
