@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav.component";
 
-const Contact = () => {
+export const Contact = () => {
   return <div>Contact</div>;
 };
 

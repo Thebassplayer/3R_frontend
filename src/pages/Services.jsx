@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav.component";
 
-const Services = () => {
+export const Services = () => {
   return <div>Services</div>;
 };
 
