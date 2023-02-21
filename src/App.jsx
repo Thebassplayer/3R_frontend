@@ -1,20 +1,19 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
 import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+import Nav from "./components/Nav.component";
 
 import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<Services />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="text-white" id="app_container">
+      <Nav>
+        <Home />
+        <Services />
+        <Contact />
+      </Nav>
+    </div>
   );
 }
 
