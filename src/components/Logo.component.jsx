@@ -10,7 +10,7 @@ function Logo({ isOpen }) {
       }}
     >
       <img
-        className={`w-12 sm:w-20 md:w-28 ${isOpen && "hidden"}`}
+        className={`w-12 sm:w-14 md:w-16 ${isOpen && "hidden"} lg:inline`}
         src={_3R_logo}
         alt="3R_logo"
       />
