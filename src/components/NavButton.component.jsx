@@ -1,9 +1,9 @@
 import React from "react";
 
-function NavButton({ name }) {
+function NavButton({ title }) {
   return (
-    <li className="flex items-center justify-center font-Kodchasan text-3xl font-semibold text-white">
-      <button>{name}</button>
+    <li className="font-Kodchasan font-semibold text-white md:text-3xl">
+      <button>{title}</button>
     </li>
   );
 }

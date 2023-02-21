@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="text-white" id="app_container">
       <Nav>
-        <Home />
-        <Services />
-        <Contact />
+        <Home id={"home"} />
+        <Services id={"services"} />
+        <Contact id={"contact"} />
       </Nav>
     </div>
   );
