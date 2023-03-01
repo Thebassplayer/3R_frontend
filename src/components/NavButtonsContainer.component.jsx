@@ -1,14 +1,11 @@
-import React, { Children } from "react";
-
 import NavButton from "./NavButton.component";
 
-function NavButtonsContainer({ sections, isOpen }) {
-  console.log("sections: ", sections);
+function NavButtonsContainer({ sections, isMenuOpen }) {
   return (
     <ul
       className={`items-center ${
-        !isOpen ? "hidden" : "flex"
-      } gap-10 lg:flex lg:justify-end`}
+        isMenuOpen ? "flex" : "hidden"
+      } mr-2 gap-10 lg:flex lg:justify-end`}
     >
       {sections.map(section => {
         const sectionTitle = section.props.id;
