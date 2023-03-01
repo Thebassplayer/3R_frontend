@@ -1,6 +1,5 @@
-import React, { Children, useState } from "react";
+import React, { Children, useState, useMemo } from "react";
 
-import NavButton from "./NavButton.component";
 import Logo from "./Logo.component";
 import HamburguerMenu from "./HamburguerMenu.component";
 import NavButtonsContainer from "./NavButtonsContainer.component";
@@ -8,9 +7,7 @@ import NavButtonsContainer from "./NavButtonsContainer.component";
 const Nav = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const childrenArray = Children.toArray(children);
-
-  console.log(childrenArray);
+  const sectionsArray = Children.toArray(children);
 
   return (
     <div className="bg-gradient-to-b from-[#3A2CDA] to-black">
@@ -20,17 +17,7 @@ const Nav = ({ children }) => {
       >
         <Logo isOpen={isOpen} />
 
-        <ul
-          className={`items-center ${
-            !isOpen && "hidden opacity-0"
-          } flex gap-10 transition-opacity duration-500 lg:flex lg:justify-end lg:opacity-100`}
-        >
-          {Children.map(children, child => {
-            const title = child.props.id;
-            console.log(title);
-            return <NavButton key={title} title={title} />;
-          })}
-        </ul>
+        <NavButtonsContainer isOpen={isOpen} sections={sectionsArray} />
 
         <HamburguerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
