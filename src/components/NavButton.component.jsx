@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function NavButton({ path, name }) {
+function NavButton({ title }) {
   return (
-    <li className="flex items-center justify-center font-Kodchasan text-3xl font-semibold">
-      <Link to={path}>{name}</Link>
+    <li className="font-Kodchasan text-xl font-semibold text-white md:text-3xl">
+      <a href={`#${title}`}>{title}</a>
     </li>
   );
 }
