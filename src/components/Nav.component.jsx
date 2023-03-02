@@ -1,8 +1,6 @@
 import React, { Children, useState, useMemo } from "react";
 
 import Logo from "./Logo.component";
-import HamburguerMenu from "./HamburguerMenu.component";
-import NavButtonsContainer from "./NavButtonsContainer.component";
 import NavMenu from "./NavMenu.component";
 
 const Nav = ({ children }) => {
@@ -23,14 +21,18 @@ const Nav = ({ children }) => {
           setIsMenuOpen={setIsMenuOpen}
         />
       </div>
-
-      {Children.map(children, child => {
-        return (
-          <div id={child.props.id} className="h-screen pt-24 sm:pt-20 md:pt-24">
-            {child}
-          </div>
-        );
-      })}
+      <div id="section-container" className="snap-y">
+        {Children.map(children, child => {
+          return (
+            <div
+              id={child.props.id}
+              className="h-screen snap-center pt-24 sm:pt-20 md:pt-24"
+            >
+              {child}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
