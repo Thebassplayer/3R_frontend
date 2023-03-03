@@ -14,7 +14,7 @@ function HamburguerMenu({ isMenuOpen, setIsMenuOpen }) {
           setIsMenuOpen(!isMenuOpen);
         }}
       >
-        <img src={Hamburguer} className={"w-12 min-w-max sm:w-12 md:w-12"} />
+        <img src={Hamburguer} className={"w-10 min-w-max sm:w-12 md:w-12"} />
       </button>
     </div>
   );
