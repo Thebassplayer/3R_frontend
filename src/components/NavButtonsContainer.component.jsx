@@ -5,7 +5,7 @@ function NavButtonsContainer({ sections, isMenuOpen }) {
     <ul
       className={`items-center ${
         isMenuOpen ? "flex" : "hidden"
-      } mr-2 gap-6 lg:flex lg:justify-end`}
+      } mr-2 gap-5 lg:flex lg:justify-end`}
     >
       {sections.map(section => {
         const sectionTitle = section.props.id;
