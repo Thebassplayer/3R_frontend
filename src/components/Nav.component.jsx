@@ -21,7 +21,7 @@ const Nav = ({ children }) => {
           setIsMenuOpen={setIsMenuOpen}
         />
       </div>
-      <div id="section-container" className="snap-y">
+      <div id="section-container" className="snap-y snap-mandatory">
         {Children.map(children, child => {
           return (
             <div

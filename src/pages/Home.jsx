@@ -1,8 +1,12 @@
 import React from "react";
-import Nav from "../components/Nav.component";
+import HomeHero from "../components/HomeHero.component";
 
-export const Home = ({ id }) => {
-  return <div>Home</div>;
+export const Home = () => {
+  return (
+    <div>
+      <HomeHero />
+    </div>
+  );
 };
 
 export default Home;
