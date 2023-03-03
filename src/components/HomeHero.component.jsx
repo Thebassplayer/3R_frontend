@@ -10,9 +10,9 @@ function HomeHero() {
         </h1>
       </div>
       <img
-        className="mt-24 scale-95 transition-all 
-        duration-500
-        ease-in-out hover:scale-100 hover:transition-all hover:duration-500 hover:ease-in-out"
+        className="mt-24 block scale-95 
+        transition-all
+        duration-500 ease-in-out hover:scale-100 hover:transition-all hover:duration-500 hover:ease-in-out"
         src={hero_ilustration_shadow}
         alt="Main ilustration"
       />

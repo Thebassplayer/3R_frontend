@@ -11,7 +11,7 @@ const Nav = ({ children }) => {
   return (
     <div className="bg-gradient-to-b from-[#3A2CDA] to-black">
       <div
-        className={`fixed top-0 left-0 flex w-full items-center justify-between p-5 backdrop-blur-sm sm:px-6 lg:p-2`}
+        className={`fixed top-0 left-0 z-50 flex w-full items-center justify-between p-5 backdrop-blur-sm sm:px-6 lg:p-2`}
       >
         <Logo isMenuOpen={isMenuOpen} />
 
