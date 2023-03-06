@@ -1,6 +1,6 @@
 import NavButton from "./NavButton.component";
 
-function NavButtonsContainer({ sections, isMenuOpen }) {
+function NavButtonsContainer({ sections, isMenuOpen, sectionsRef }) {
   return (
     <ul
       className={`items-center ${
@@ -9,7 +9,14 @@ function NavButtonsContainer({ sections, isMenuOpen }) {
     >
       {sections.map(section => {
         const sectionTitle = section.props.id;
-        return <NavButton key={sectionTitle} title={sectionTitle} />;
+        const sectionRef = sectionsRef.current[sectionTitle];
+        return (
+          <NavButton
+            key={sectionTitle}
+            title={sectionTitle}
+            sectionRef={sectionRef}
+          />
+        );
       })}
     </ul>
   );

@@ -1,10 +1,11 @@
-import React, { Children, useState } from "react";
+import React, { Children, useState, useRef } from "react";
 
 import Logo from "./Logo.component";
 import NavMenu from "./NavMenu.component";
 
 const Nav = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const sectionsRef = useRef({});
 
   const sectionsArray = Children.toArray(children);
 
@@ -16,6 +17,7 @@ const Nav = ({ children }) => {
         <Logo isMenuOpen={isMenuOpen} />
 
         <NavMenu
+          sectionsRef={sectionsRef}
           isMenuOpen={isMenuOpen}
           sections={sectionsArray}
           setIsMenuOpen={setIsMenuOpen}
@@ -27,6 +29,7 @@ const Nav = ({ children }) => {
             <div
               key={`section-${index}-${child.props.id}`}
               id={child.props.id}
+              ref={el => (sectionsRef.current[child.props.id] = el)}
               className="h-screen snap-center pt-24 sm:pt-20 md:pt-24"
             >
               {child}
