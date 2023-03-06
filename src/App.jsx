@@ -7,7 +7,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="text-white" id="app_container">
+    <div className="scroll-smooth text-white" id="app_container">
       <Nav>
         <Home id={"home"} />
         <Services id={"services"} />
