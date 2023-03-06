@@ -1,4 +1,4 @@
-import React, { Children, useState, useMemo } from "react";
+import React, { Children, useState } from "react";
 
 import Logo from "./Logo.component";
 import NavMenu from "./NavMenu.component";
@@ -22,9 +22,10 @@ const Nav = ({ children }) => {
         />
       </div>
       <div id="section-container" className="snap-y snap-mandatory">
-        {Children.map(children, child => {
+        {sectionsArray.map((child, index) => {
           return (
             <div
+              key={`section-${index}-${child.props.id}`}
               id={child.props.id}
               className="h-screen snap-center pt-24 sm:pt-20 md:pt-24"
             >
